@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css?family=Exo+2:500|Roboto')
+	
+$color1: #01134E
+$bgColor: #F9FAFC
+$textColorBlack: #252F48
+=border-radius($radius)
+  border-radius: $radius
+$font: 'Roboto', sans-serif
+$font1: 'Exo 2', sans-serif
+
+* 
+	box-sizing: border-box
+a 
+	text-decoration: none	
+ul 
+	padding: 0
+	list-style: none
+p 
+	margin: 0
+
+input 
+	border: 0 
+	outline: 0 
+	outline-offset: 0
+	color: $textColorBlack
+	opacity: 0.6
+body 
+	margin: 0
+	padding: 0
+	font-size: 14px
+	font-family: $font
+	background-color: $bgColor
+
+.wrapper 
+	min-height: 100vh
+	display: flex
+	justify-content: space-between
+	width: 1022px 
+	margin: 0 auto
+	border: 1px solid #DAE4F2
+
+.sidebar 
+	width: 80px
+	display: flex 
+	align-items: center
+	justify-content: flex-start
+	flex-direction: column
+	background-color: $color1	
+	&__logo
+		img 
+			display: block
+			width: 35px 
+			height: 35px
+			margin-top: 20px
+			margin-bottom: 40px
+.navigation 
+	width: 100%
+	display: flex 
+	align-items: center
+	justify-content: flex-start
+	flex-direction: column
+	&__item 
+		width: 100%
+		height: 50px
+		margin-bottom: 10px
+		border-left: 4px solid transparent
+		position: relative
+		img 
+			opacity: 0.5			
+		&:hover 
+			border-color: #0AD69C
+			img 
+				opacity: 1
+		&--active 
+			border-color: #0AD69C
+			img 
+				opacity: 1
+		&--notification
+			span 
+				width: 19px 
+				height: 19px
+				display: flex
+				justify-content: center 
+				align-items: center
+				position: absolute
+				left: 40px
+				top: 10px
+
+				font-size: 12px
+				color: #ffffff
+				background-color: #2A74DB
+				+border-radius(50%)
+		a 
+			display: flex 
+			justify-content: center
+			align-items: center
+			height: 100% 
+			width: 100%
+
+.main_content
+	width: calc(100% - 80px)
+	&_top 
+		height: 60px
+		padding: 0 45px
+		display: flex 
+		justify-content: space-between
+		align-items: center	
+		border-bottom: 1px solid #DAE4F2
+		background-color: #ffffff
+		&__breadcrumb
+			margin: 0
+			display: flex 
+			justify-content: flex-start 
+			align-itms: center
+			li
+				a 
+					color: $textColorBlack
+					font-size: 13px
+					line-height: 15px
+					padding-right: 25px
+					margin-right: 10px
+					position: relative
+					&:after 
+						content: ''
+						display: block
+						position: absolute
+						width: 7px 
+						height: 9px
+						right: 4px
+						top: 50% 
+						transform: translateY(-50%)
+						background-image: url(../img/Vector_brdcr.svg)
+						background-position: center center 
+						background-repeat: no-repeat
+
+				&:last-child 
+					a 
+						&:after 
+							display: none
+
+	
+.main_content_top__profile
+	display: flex
+	justify-content: center 
+	align-items: center
+	cursor: pointer
+.profile_avatar
+	width: 22px 
+	height: auto
+	display: inline-block
+	margin-right: 10px
+.profile_toggler
+	width: 5px 
+	height: auto
+	display: inline-block
+	margin-left: 7px
+
+.main_content__message_block_wrapper
+	padding: 45px
+
+.main_content__message_block
+	width: 100% 
+	display: flex
+	justify-content: space-between
+	//align-items: flex-start
+	background-color: #ffffff
+	+border-radius(5px)
+	box-shadow: 0px 0px 12px -2px rgba(0,0,0,0.1)
+	max-height: 540px
+	overflow: hidden
+
+.friends_list
+	width: 300px 
+	margin: 0
+	border-right: 1px solid #EDF0F4
+	&__item 
+		position: relative
+		display: flex 
+		align-content: center 
+		justify-content: flex-start 
+		flex-wrap: wrap
+		padding-left: 85px
+		padding-right: 35px
+		height: 90px
+		cursor: pointer
+		&--active 
+			box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.18)
+		&--mute 
+			.friends_list__mute
+				display: block
+				position: absolute
+				top: 50% 
+				transform: translateY(-50%)
+				right: -25px
+		&--notification
+			background-color: #F7F9FC
+		&--online
+			.friends_list__name
+				position: relative
+				&:after 
+					content: ''
+					display: block
+					width: 6px 
+					height: 6px
+					position: absolute 
+					right: -9px 
+					top: 3px
+					+border-radius(50%)
+					background-color: #0AD69C 
+	&__mute 
+		display: none
+	&__photo 
+		position: absolute
+		width: 50px 
+		height: 50px
+		top: 50% 
+		transform: translateY(-50%)
+		left: 21px
+	&__time
+		right: 7.5px 
+		top: 15px
+	&__name
+		font-size: 16px
+		font-family: $font1
+		color: $color1
+		position: relative
+	&__message 
+		margin-top: 5px
+		color: $textColorBlack
+		height: 17px
+		max-width: 180px
+		width: 100%
+		text-overflow: ellipsis
+		opacity: 0.6
+
+.main_content__chat
+	width: calc(100% - 300px)
+	position: relative
+
+.chat__search
+	height: 47px
+	border-bottom: 1px solid #F5F6F9
+	form 
+		height: 100%
+		padding: 0 20px
+		display: flex 
+		align-items: center 
+		justify-content: flex-start
+		input 
+			width: 80%
+		button 
+			width: 20px
+			height: 20px
+			margin-right: 20px
+			border: 0
+			outline: 0
+			outline-offset: 0
+			cursor: pointer
+			background-color: transparent
+			background-image: url('../img/Shape_(2).svg')
+			background-position: center center 
+			background-repeat: no-repeat
+.time 
+	color: #9BA0AD
+	position: absolute
+
+.chat__main_block
+	height: 435px
+	padding: 20px
+	display: flex
+	flex-wrap: wrap
+	justify-content: flex-end
+	overflow-y: scroll
+	&::-webkit-scrollbar
+		width: 8px
+	&::-webkit-scrollbar-track
+		background-color: #F7F9FC
+		+border-radius(5px)
+	&::-webkit-scrollbar-thumb
+		background-color: rgba(0,0,0,0.1)
+		+border-radius(5px)
+		opacity: 0.1
+.chat__write_message
+	height: 60px
+	display: flex 
+	justify-content: space-between
+	align-items: center
+	box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.18)
+	input 
+		width: 60%
+		padding-left: 30px
+.message_icons
+	padding-right: 20px
+	display: flex 
+	justify-content: center 
+	align-items: center
+	&__item 
+		width: 36px 
+		height: 36px
+		display: flex 
+		justify-content: center 
+		align-items: center
+		cursor: pointer
+		+border-radius(5px)
+		&:last-child
+			box-shadow: 0px 0px 13px -1px rgba(0,0,0,0.2)	
+			margin: 0 0 0 15px
+
+.chat_item
+	display: flex 
+	justify-content: flex-start 
+	align-items: flex-end
+	width: 100%
+	margin-top: 15px
+	position: relative
+	&__date 
+		width: 100% 
+		margin: 50px 0 35px 0
+		color: #9BA0AD
+		text-align: center
+	&__photo
+		display: none
+		width: 50px
+		height: 50px
+	&__message 
+		width: 300px
+		padding: 20px 65px 10px 15px
+		margin-bottom: 5px
+		position: relative
+		background-color: #F7F9FC
+		&:after 
+			position: absolute
+			content: ''
+			display: block
+			width: 25px
+			height: 25px 
+			background-image: url('../img/Vector_after.svg')
+			background-size: cover
+			background-position: center center 
+			background-repeat: no-repeat
+	&__time 
+		right: 12.5px 
+		bottom: 10px
+	&--received
+		.chat_item__photo
+			display: block
+			margin-right: 10px
+		.chat_item__message
+			&:after
+				left: -7.5px
+				bottom: 0px
+	&--send 
+		.chat_item__message
+			margin-left: auto
+			&:after 
+				bottom: -2px
+				right: -7px
+				transform: rotateY(180deg)

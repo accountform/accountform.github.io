@@ -1,0 +1,510 @@
+@import url("https://fonts.googleapis.com/css?family=Exo+2:500|Roboto");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+a {
+  text-decoration: none; }
+
+ul {
+  padding: 0;
+  list-style: none; }
+
+p {
+  margin: 0; }
+
+input {
+  border: 0;
+  outline: 0;
+  outline-offset: 0;
+  color: #252F48;
+  opacity: 0.6; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  background-color: #F9FAFC; }
+
+.wrapper {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 1022px;
+  margin: 0 auto;
+  border: 1px solid #DAE4F2; }
+
+.sidebar {
+  width: 80px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #01134E; }
+  .sidebar__logo img {
+    display: block;
+    width: 35px;
+    height: 35px;
+    margin-top: 20px;
+    margin-bottom: 40px; }
+
+.navigation {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .navigation__item {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+    border-left: 4px solid transparent;
+    position: relative; }
+    .navigation__item img {
+      opacity: 0.5; }
+    .navigation__item:hover {
+      border-color: #0AD69C; }
+      .navigation__item:hover img {
+        opacity: 1; }
+    .navigation__item--active {
+      border-color: #0AD69C; }
+      .navigation__item--active img {
+        opacity: 1; }
+    .navigation__item--notification span {
+      width: 19px;
+      height: 19px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      position: absolute;
+      left: 40px;
+      top: 10px;
+      font-size: 12px;
+      color: #ffffff;
+      background-color: #2A74DB;
+      -webkit-border-radius: 50%;
+              border-radius: 50%; }
+    .navigation__item a {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      height: 100%;
+      width: 100%; }
+
+.main_content {
+  width: -webkit-calc(100% - 80px);
+  width: calc(100% - 80px); }
+  .main_content_top {
+    height: 60px;
+    padding: 0 45px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-bottom: 1px solid #DAE4F2;
+    background-color: #ffffff; }
+    .main_content_top__breadcrumb {
+      margin: 0;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: start;
+      -webkit-justify-content: flex-start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      align-itms: center; }
+      .main_content_top__breadcrumb li a {
+        color: #252F48;
+        font-size: 13px;
+        line-height: 15px;
+        padding-right: 25px;
+        margin-right: 10px;
+        position: relative; }
+        .main_content_top__breadcrumb li a:after {
+          content: '';
+          display: block;
+          position: absolute;
+          width: 7px;
+          height: 9px;
+          right: 4px;
+          top: 50%;
+          -webkit-transform: translateY(-50%);
+              -ms-transform: translateY(-50%);
+                  transform: translateY(-50%);
+          background-image: url(../img/Vector_brdcr.svg);
+          background-position: center center;
+          background-repeat: no-repeat; }
+      .main_content_top__breadcrumb li:last-child a:after {
+        display: none; }
+
+.main_content_top__profile {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer; }
+
+.profile_avatar {
+  width: 22px;
+  height: auto;
+  display: inline-block;
+  margin-right: 10px; }
+
+.profile_toggler {
+  width: 5px;
+  height: auto;
+  display: inline-block;
+  margin-left: 7px; }
+
+.main_content__message_block_wrapper {
+  padding: 45px; }
+
+.main_content__message_block {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #ffffff;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 12px -2px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 12px -2px rgba(0, 0, 0, 0.1);
+  max-height: 540px;
+  overflow: hidden; }
+
+.friends_list {
+  width: 300px;
+  margin: 0;
+  border-right: 1px solid #EDF0F4; }
+  .friends_list__item {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-content: center;
+        -ms-flex-line-pack: center;
+            align-content: center;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    padding-left: 85px;
+    padding-right: 35px;
+    height: 90px;
+    cursor: pointer; }
+    .friends_list__item--active {
+      -webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.18);
+              box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.18); }
+    .friends_list__item--mute .friends_list__mute {
+      display: block;
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+              transform: translateY(-50%);
+      right: -25px; }
+    .friends_list__item--notification {
+      background-color: #F7F9FC; }
+    .friends_list__item--online .friends_list__name {
+      position: relative; }
+      .friends_list__item--online .friends_list__name:after {
+        content: '';
+        display: block;
+        width: 6px;
+        height: 6px;
+        position: absolute;
+        right: -9px;
+        top: 3px;
+        -webkit-border-radius: 50%;
+                border-radius: 50%;
+        background-color: #0AD69C; }
+  .friends_list__mute {
+    display: none; }
+  .friends_list__photo {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    left: 21px; }
+  .friends_list__time {
+    right: 7.5px;
+    top: 15px; }
+  .friends_list__name {
+    font-size: 16px;
+    font-family: "Exo 2", sans-serif;
+    color: #01134E;
+    position: relative; }
+  .friends_list__message {
+    margin-top: 5px;
+    color: #252F48;
+    height: 17px;
+    max-width: 180px;
+    width: 100%;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
+    opacity: 0.6; }
+
+.main_content__chat {
+  width: -webkit-calc(100% - 300px);
+  width: calc(100% - 300px);
+  position: relative; }
+
+.chat__search {
+  height: 47px;
+  border-bottom: 1px solid #F5F6F9; }
+  .chat__search form {
+    height: 100%;
+    padding: 0 20px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
+    .chat__search form input {
+      width: 80%; }
+    .chat__search form button {
+      width: 20px;
+      height: 20px;
+      margin-right: 20px;
+      border: 0;
+      outline: 0;
+      outline-offset: 0;
+      cursor: pointer;
+      background-color: transparent;
+      background-image: url("../img/Shape_(2).svg");
+      background-position: center center;
+      background-repeat: no-repeat; }
+
+.time {
+  color: #9BA0AD;
+  position: absolute; }
+
+.chat__main_block {
+  height: 435px;
+  padding: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  overflow-y: scroll; }
+  .chat__main_block::-webkit-scrollbar {
+    width: 8px; }
+  .chat__main_block::-webkit-scrollbar-track {
+    background-color: #F7F9FC;
+    -webkit-border-radius: 5px;
+            border-radius: 5px; }
+  .chat__main_block::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.1);
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
+    opacity: 0.1; }
+
+.chat__write_message {
+  height: 60px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.18);
+          box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.18); }
+  .chat__write_message input {
+    width: 60%;
+    padding-left: 30px; }
+
+.message_icons {
+  padding-right: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .message_icons__item {
+    width: 36px;
+    height: 36px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+            border-radius: 5px; }
+    .message_icons__item:last-child {
+      -webkit-box-shadow: 0px 0px 13px -1px rgba(0, 0, 0, 0.2);
+              box-shadow: 0px 0px 13px -1px rgba(0, 0, 0, 0.2);
+      margin: 0 0 0 15px; }
+
+.chat_item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 100%;
+  margin-top: 15px;
+  position: relative; }
+  .chat_item__date {
+    width: 100%;
+    margin: 50px 0 35px 0;
+    color: #9BA0AD;
+    text-align: center; }
+  .chat_item__photo {
+    display: none;
+    width: 50px;
+    height: 50px; }
+  .chat_item__message {
+    width: 300px;
+    padding: 20px 65px 10px 15px;
+    margin-bottom: 5px;
+    position: relative;
+    background-color: #F7F9FC; }
+    .chat_item__message:after {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 25px;
+      height: 25px;
+      background-image: url("../img/Vector_after.svg");
+      -webkit-background-size: cover;
+              background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat; }
+  .chat_item__time {
+    right: 12.5px;
+    bottom: 10px; }
+  .chat_item--received .chat_item__photo {
+    display: block;
+    margin-right: 10px; }
+  .chat_item--received .chat_item__message:after {
+    left: -7.5px;
+    bottom: 0px; }
+  .chat_item--send .chat_item__message {
+    margin-left: auto; }
+    .chat_item--send .chat_item__message:after {
+      bottom: -2px;
+      right: -7px;
+      -webkit-transform: rotateY(180deg);
+              transform: rotateY(180deg); }
